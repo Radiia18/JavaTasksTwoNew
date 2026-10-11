@@ -4,16 +4,14 @@ public class TaskS {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
+        int x1 = scanner.nextInt();
+        int y1 = scanner.nextInt();
+        int x2 = scanner.nextInt();
+        int y2 = scanner.nextInt();
 
-        if (a == b && b == c) {
-            System.out.println(3);
-        } else if (a == b || a == c || b == c) {
-            System.out.println(2);
-        } else {
-            System.out.println(0);
-        }
+        boolean canMove = Math.abs(x1 - x2) <= 1
+                && Math.abs(y1 - y2) <= 1;
+
+        System.out.println(canMove ? "YES" : "NO");
     }
 }
