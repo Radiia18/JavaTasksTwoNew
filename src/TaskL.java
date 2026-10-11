@@ -8,7 +8,7 @@ public class TaskL {
         int m = scanner.nextInt();
         int n = scanner.nextInt();
 
-        int batches = (2 * n + k - 1) / k;
-        System.out.println(batches * m);
+        int intervals = Math.max(2, (2 * n + k - 1) / k);
+        System.out.println(intervals * m);
     }
 }
